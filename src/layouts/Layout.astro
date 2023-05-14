@@ -53,7 +53,8 @@ import Footer from "../components/Footer.astro";
 			>
 		</div>
 		<div
-			class="fixed w-full z-50 bg-dark_primary py-2 md:py-0 px-4 text-white sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 rounded-b-lg"
+			class="fixed w-full z-50 bg-dark_primary py-2 md:py-0 px-4 text-white sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 rounded-b-lg transition-all"
+			id="ann"
 		>
 			<p class="text-center font-medium sm:text-left">
 				מחלק שיחות יעוץ לשחקנים חינם
@@ -79,5 +80,22 @@ import Footer from "../components/Footer.astro";
 		<script
 			src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"
 		></script>
+
+		<script>
+			const nav = document.querySelector("#ann");
+			let lastScrollY = window.scrollY;
+
+			window.addEventListener("scroll", () => {
+				if (lastScrollY < window.scrollY) {
+					// @ts-ignore
+					nav.classList.add("opacity-0");
+				} else {
+					// @ts-ignore
+					nav.classList.remove("opacity-0");
+				}
+
+				lastScrollY = window.scrollY;
+			});
+		</script>
 	</body>
 </html>
