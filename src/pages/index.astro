@@ -1,0 +1,121 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Sep from "../components/Sep.astro";
+import Contact from "../components/Contact.astro";
+import Divider from "../components/Divider.astro";
+import Method from "../components/Method.astro";
+import Features from "../components/Features.astro";
+---
+
+<Layout title="אבירם אטיאס">
+	<main class="relative w-full">
+		<section
+			class="relative flex min-h-[75vh] w-full flex-col items-center justify-center text-center"
+		>
+			<div class="max-w-xl px-8 text-white lg:max-w-4xl">
+				<h1 class="font-heebo text-4xl font-bold xl:text-5xl">
+					השחקן הפנימי
+				</h1>
+				<Sep />
+				<h3
+					class="font-varela text-base md:text-lg lg:text-xl xl:text-2xl"
+				>
+					סדנת בוסט מנטלי שעוזרת לשחקנים למקסם את היכולות שלהם ברמה
+					קיצונית ולצמצם את הפער בין הפוטנציאל לביצוע בזמן משחק.
+				</h3>
+				<div
+					class="mt-5 flex flex-row justify-center gap-5 font-heebo font-bold"
+				>
+					<a
+						data-ripple-light="true"
+						href="#about"
+						class="inline-block w-fit cursor-pointer rounded-md bg-primary px-5 py-3 tracking-wider text-text_color transition-all hover:scale-105"
+					>
+						קרא עוד
+					</a>
+					<a
+						data-ripple-light="true"
+						href="#contact"
+						class="inline-block w-fit cursor-pointer rounded-md border-2 border-primary bg-transparent px-5 py-3 tracking-wider text-text_color backdrop-blur-md transition-all hover:scale-105"
+					>
+						צור קשר
+					</a>
+				</div>
+			</div>
+
+			<img
+				src="/aviram/hero-banner.png"
+				alt=""
+				class="absolute top-0 -z-10 h-full w-full object-cover object-center brightness-[65%]"
+			/>
+		</section>
+		<section class="scroll-m-16 bg-home py-7 text-center" id="about">
+			<div
+				class="mx-auto w-full max-w-screen-xl items-stretch justify-center px-3 text-center md:px-10"
+			>
+				<div class="w-full p-5">
+					<h1 class="font-varela text-4xl font-bold xl:text-5xl">
+						מי אני?
+					</h1>
+					<Sep />
+
+					<p
+						class="mx-auto max-w-5xl text-lg md:text-xl xl:text-2xl mb-5 text-right"
+					>
+						קוראים לי אבירם אטיאס, בן 29 גדלתי בקריות ושיחקתי
+						במחלקות נוער עד הגיוס לצה"ל. במהלך הדרך נלחמתי כל הזמן
+						כדי לגשר על הפער בין הפוטנציאל העצום שלי כשחקן לבין
+						היכולת להביא את זה בזמן משחק עם הזמן הבנתי שהאתגר העיקרי
+						שלי הוא לא פיזי, מקצועי או טקטי, אלא מנטאלי. כיום, בתור
+						מאמן כדורסל במחלקות נוער שעברו תחתיו לא מעט שחקנים עם
+						הסמכה של מאמן מנטאלי לספורטאים, יצרתי באמצעות הידע
+						והניסיון הרב בשטח את שיטת "השחקן הפנימי" שעוזרת לשחקנים
+						למקסם את היכולות שלהם ברמה קיצונית ולצמצם את הפער בין
+						הפוטנציאל לביצוע תכלס בזמן משחק.
+					</p>
+					<button
+						data-ripple-light="true"
+						class="order-4 mx-auto block rounded-md bg-primary px-5 py-3 tracking-wider text-text_color transition-all hover:scale-105"
+					>
+						קבע שיחת הכירות
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<div id="method"></div>
+		<Divider />
+
+		<section class="w-full">
+			<h1 class="font-varela text-4xl font-bold xl:text-5xl">השיטה</h1>
+			<div
+				class="flex flex-col md:flex-row p-5 justify-center items-center gap-5 md:gap-7 flex-grow"
+			>
+				<Method
+					title="יצירת דרך מנטלית"
+					body="למידת כלים מנטאליים פרקטיים שיסללו לכם דרך להרגלים של שחקנים מקצוענים"
+					svgClass="brain"
+				/>
+				<Method
+					title='הטמעת "מיינדסט" של ווינרים'
+					body='"השתלת עמוד שידרה" של שחקן מנצח שיודע להתמודד עם משברים בזמן לחץ ו"מאני טיים"'
+					svgClass="trophy"
+				/>
+				<Method
+					title="הנאה מהדרך לתוצאות"
+					body="גישור הפער בין הפוטנציאל לביצוע בזמן משחק "
+					svgClass="face-grin"
+				/>
+			</div>
+		</section>
+
+		<div id="course"></div>
+		<Divider />
+		<Features />
+
+		<div id="contact"></div>
+		<Divider />
+
+		<Contact />
+	</main>
+</Layout>
